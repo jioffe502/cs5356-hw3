@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jacobioffe.io</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'warm-brown': '#a8684c',
+                        'muted-red': '#9e6355',
+                        'deep-red': '#9b3823',
+                        'dark-red': '#8c3c23',
+                        'golden': '#f4c16c',
+                        'bg-cream': '#e4e4d5',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans w-11/12 md:w-3/5 mx-auto my-2 md:my-20 bg-bg-cream">
+    <main class="grid grid-cols-[1fr_auto_1fr] grid-rows-[auto_1fr_auto] gap-8 min-h-[80vh]">
+        <!-- LEFT COLUMN -->
+        <div class="col-start-1 row-start-1 sticky top-8 max-w-xs">
+            <h1 class="text-2xl text-warm-brown mb-8">
+                jacob ioffe 🚠
+            </h1>
+
+            <ul class="list-none p-0">
+                <li class="font-bold my-3">
+                    <a href="hw3/hw3.html" class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">hw 3 shenanigans</a>
+                </li>
+                <li class="font-bold my-3">
+                    <a href="https://github.com/jioffe502" class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">github</a>
+                </li>
+                <li class="font-bold my-3">
+                    <a href="https://twitter.com/ioffejacob" class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">twitter</a>
+                </li>
+                <li class="font-bold my-3">
+                    <a href="resume.pdf" class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">resume</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="col-start-3 row-start-2 mt-42 text-deep-red text-lg max-w-prose">
+            <p class="mb-4">
+                I'm a software engineer and researcher at Cornell Tech, working at the intersection of machine learning and healthcare.
+            </p>
+            <p class="mb-4">
+                My research focuses on how deep learning can be used efficiently and effectively across healthcare systems. I'm particularly interested in how we can use AI to interpret and synthesize the vast landscape of health data signals to augment clinical intelligence and decision-making.
+            </p>
+            <p>
+                When I'm not coding, you can find me <a href="gallery/" class="underline hover:text-golden transition-colors">taking photos of my dog</a>, exercising, or sitting about in New York City.
+            </p>
+        </div>
+
+        <!-- Previously was using MDN's footer class but i didnt like how non flexible it was... it would run into my paragraph text -->
+        <div class="col-start-1 row-start-3 mb-4">
+            <p class="text-sm text-dark-red whitespace-nowrap">
+                * Its like coffee with a y
+            </p>
+        </div>
+    </main>
+</body>
+</html>

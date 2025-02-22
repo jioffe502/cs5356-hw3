@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HW3 Shenanigans | jacobioffe.io</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'warm-brown': '#a8684c',
+                        'muted-red': '#9e6355',
+                        'deep-red': '#9b3823',
+                        'dark-red': '#8c3c23',
+                        'golden': '#f4c16c',
+                        'bg-cream': '#e4e4d5',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans w-11/12 md:w-3/5 mx-auto my-2 md:my-20 bg-bg-cream">
+    <main class="grid grid-cols-[1fr_auto_1fr] grid-rows-[auto_1fr_auto] gap-8 min-h-[80vh]">
+        <!-- cd .. functionality -->
+        <div class="col-start-1 row-start-1">
+            <h1 class="text-2xl text-warm-brown mb-8">
+                <a href="/" class="hover:text-golden transition-colors"> / jacob ioffe 🚠</a>
+            </h1>
+        </div>
+
+        <!-- IMG -->
+        <div class="col-start-1 row-start-2 mb-4">
+            <img src="/img/headshot_professional.jpg" alt="Headshot of Jacob Ioffe" class="w-full h-auto rounded-lg">
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-start-3 row-start-2 text-deep-red text-lg max-w-prose">
+            <h2 class="text-2xl mb-8">HW3 Shenanigans</h2>
+
+            <!-- Details MDN Element -->
+            <details class="mb-8 cursor-pointer">
+                <summary class="text-xl mb-4 hover:text-golden transition-colors">About This Page</summary>
+                <p class="pl-4 mb-4">
+                    This page demonstrates some HTML and CSS features, plus fetches my paper from bioRxiv.
+                </p>
+            </details>
+
+            <!-- API call -->
+            <div class="mb-8">
+                <h3 class="text-xl mb-4">My Research</h3>
+                <div id="papers" class="space-y-4">
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="col-start-1 row-start-3 mb-4">
+            <p class="text-sm text-dark-red whitespace-nowrap">
+                * Its like coffee with a y
+            </p>
+        </div>
+    </main>
+
+    <script>
+        async function loadPaper() {
+            try {
+                const doi = '10.1101/2021.03.24.436848';
+                const response = await fetch(`https://api.biorxiv.org/details/biorxiv/${doi}`);
+                const data = await response.json();
+                
+                const container = document.getElementById('papers');
+                const paper = data.collection[0];
+                
+                const paperDiv = document.createElement('div');
+                paperDiv.className = 'p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors';
+                paperDiv.innerHTML = `
+                    <h4 class="font-bold mb-2">Autism_genepheno: Text mining of gene-phenotype associations reveals new phenotypic profiles of autism-associated genes</h4>
+                    <p class="text-base opacity-80 mb-2">Sijie Li, Ziqi Guo, <strong>Jacob B. Ioffe</strong>, Yunfei Hu, Yi Zhen, Xin Zhou</p>
+                    <p class="text-base mb-4 italic">bioRxiv 2021</p>
+                    <p class="text-base mb-4">
+                        Autism is a spectrum disorder with wide variation in type and severity of symptoms. Understanding gene–phenotype associations is vital to unravel the disease mechanisms and advance its diagnosis and treatment...
+                    </p>
+                    <a href="https://doi.org/${doi}" 
+                       class="text-golden hover:underline text-base inline-flex items-center" 
+                       target="_blank">
+                       Read Paper →
+                    </a>
+                `;
+                container.appendChild(paperDiv);
+            } catch (error) {
+                console.error('Error loading paper:', error);
+            }
+        }
+
+        loadPaper();
+    </script>
+</body>
+</html> 

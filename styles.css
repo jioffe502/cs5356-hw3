@@ -1,0 +1,16 @@
+@layer base {
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      background-color: #e4e4d5;
+    }
+  }
+  
+  :root {
+    --color-warm-brown: #a8684c;
+    --color-muted-red: #9e6355;
+    --color-deep-red: #9b3823;
+    --color-dark-red: #8c3c23;
+    --color-golden: #f4c16c;
+  }
