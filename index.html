@@ -3,7 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jacobioffe.io</title>
+    <title>Jacob Ioffe's Webpage</title>
+    
+    <meta property="og:title" content="Jacob Ioffe - Software Engineer & Researcher">
+    <meta property="og:description" content="Software engineer and researcher at Cornell Tech">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jioffe502.github.io/cs5356-hw3/">
+    <meta property="og:image" content="https://jioffe502.github.io/cs5356-hw3/tovah.png">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ioffejacob">
+    <meta name="twitter:title" content="Jacob Ioffe - Software Engineer & Researcher">
+    <meta name="twitter:description" content="Software engineer and researcher at Cornell Tech">
+    <meta name="twitter:image" content="https://jioffe502.github.io/cs5356-hw3/tovah.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./css/style.css">
     <script>
@@ -33,16 +46,49 @@
 
             <ul class="list-none p-0">
                 <li class="font-bold my-3">
-                    <a href="./hw3/hw3.html" class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">hw 3 shenanigans</a>
+                    <a href="./hw3/hw3.html" 
+                       onclick="window.goatcounter.count({
+                         path: 'nav-hw3-click',
+                         title: 'HW3 Navigation Click', 
+                         event: true
+                       })" 
+                       class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">hw 3 shenanigans</a>
                 </li>
                 <li class="font-bold my-3">
-                    <a href="https://github.com/jioffe502" class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">github</a>
+                    <a href="https://github.com/jioffe502" 
+                       onclick="window.goatcounter.count({
+                         path: 'nav-github-click',
+                         title: 'GitHub Navigation Click', 
+                         event: true
+                       })" 
+                       class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">github</a>
                 </li>
                 <li class="font-bold my-3">
-                    <a href="https://twitter.com/ioffejacob" class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">twitter</a>
+                    <a href="https://twitter.com/ioffejacob" 
+                       onclick="window.goatcounter.count({
+                         path: 'nav-twitter-click',
+                         title: 'Twitter Navigation Click', 
+                         event: true
+                       })" 
+                       class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">twitter</a>
                 </li>
                 <li class="font-bold my-3">
-                    <a href="resume.pdf" class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">resume</a>
+                    <a href="resume.pdf" 
+                       onclick="window.goatcounter.count({
+                         path: 'nav-resume-click',
+                         title: 'Resume Download Click', 
+                         event: true
+                       })" 
+                       class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">resume</a>
+                </li>
+                <li class="font-bold my-3">
+                    <a href="./gallery/gallery.html" 
+                       onclick="window.goatcounter.count({
+                         path: 'nav-gallery-click',
+                         title: 'Gallery Navigation Click', 
+                         event: true
+                       })" 
+                       class="text-xl font-bold p-1 text-deep-red hover:text-golden hover:scale-105 hover:-rotate-2 transition-all duration-300 ease-in-out inline-block">gallery</a>
                 </li>
             </ul>
         </div>
@@ -67,5 +113,9 @@
             </p>
         </div>
     </main>
+    
+    <!-- GoatCounter analytics -->
+    <script data-goatcounter="https://ioffe.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

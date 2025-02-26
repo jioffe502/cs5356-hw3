@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tovah Gallery - Jacob Ioffe</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Tovah Gallery - Jacob Ioffe">
+    <meta property="og:description" content="A gallery of photos featuring my puppy Tovah">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jioffe502.github.io/cs5356-hw3/gallery/gallery.html">
+    <meta property="og:image" content="https://jioffe502.github.io/cs5356-hw3/tovah.png">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'warm-brown': '#a8684c',
+                        'muted-red': '#9e6355',
+                        'deep-red': '#9b3823',
+                        'dark-red': '#8c3c23',
+                        'golden': '#f4c16c',
+                        'bg-cream': '#e4e4d5',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * {box-sizing: border-box;}
+        
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .gallery {
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-auto-rows: 50vw;
+            grid-auto-flow: dense;
+            grid-gap: 15px;
+        }
+        
+        @media (min-width: 640px) {
+            .gallery {
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: 33vw;
+            }
+        }
+        
+        @media (min-width: 768px) {
+            .gallery {
+                grid-template-columns: repeat(4, 1fr);
+                grid-auto-rows: 25vw;
+            }
+        }
+        
+        .gallery-item {
+            height: 100%;
+            list-style-type: none;
+        }
+        
+        .highlight-box {
+            grid-row: span 2;
+            grid-column: span 2;
+        }
+        
+        .highlight-tall {
+            grid-row: span 2;
+        }
+        
+        .highlight-wide {
+            grid-column: span 2;
+        }
+        
+        .gallery-img {
+            display: block;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body class="font-sans bg-bg-cream">
+    <div class="gallery-container">
+        <h1 class="text-2xl text-warm-brown mb-8">
+            <a href="../" class="hover:text-golden transition-colors"> / jacob ioffe 🚠</a>
+        </h1>
+        
+        <ul class="gallery">
+            <li class="gallery-item highlight-box">
+                <img src="tovah.png" alt="Tovah the puppy" class="gallery-img" />
+            </li>
+            <li class="gallery-item">
+                <img src="tovah2.jpeg" alt="Tovah playing" class="gallery-img" />
+            </li>
+            <li class="gallery-item highlight-tall">
+                <img src="tovah3.jpg" alt="Tovah and Jacob" class="gallery-img" />
+            </li>
+            <li class="gallery-item">
+                <img src="tovah4.jpg" alt="Tovah being cute" class="gallery-img" />
+            </li>
+        </ul>
+    </div>
+    
+    <!-- GoatCounter analytics -->
+    <script data-goatcounter="https://ioffe.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
